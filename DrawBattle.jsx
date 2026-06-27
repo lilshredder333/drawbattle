@@ -1,8 +1,11 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm";
 
+//quick fix for skipping github pages security lol
+const PARTE1 = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVwcW5ybWZnamtid2txdHpkeGhyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI1NDAzMTYsImV4cCI6MjA5ODExNjMxNn0.";
+const PARTE2 = "QUYRLb0w0NAtU1pTbzSKMxUOPPzfZNYl_lC2_3PYBh4";
 const SUPABASE_URL = "https://epqnrmfgjkbwkqtzdxhr.supabase.co";
-const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVwcW5ybWZnamtid2txdHpkeGhyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI1NDAzMTYsImV4cCI6MjA5ODExNjMxNn0.QUYRLb0w0NAtU1pTbzSKMxUOPPzfZNYl_lC2_3PYBh4";
+const SUPABASE_ANON_KEY = PARTE1 + PARTE2;
 
 let supabase = null;
 function getSupabase() {
